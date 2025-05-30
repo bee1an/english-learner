@@ -48,7 +48,7 @@ function Root() {
 
   return (
     <React.StrictMode>
-      <BrowserRouter basename={'/english-learner'}>
+      <BrowserRouter basename={REACT_APP_DEPLOY_ENV === 'pages' ? '/english-learner' : ''}>
         <Suspense fallback={<Loading />}>
           <Routes>
             {isMobile ? (

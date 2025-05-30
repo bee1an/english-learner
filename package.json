@@ -60,12 +60,13 @@
     "dev": "vite",
     "start": "vite",
     "build": "cross-env CI=false vite build --base=./",
+    "buildpage": "cross-env CI=false REACT_APP_DEPLOY_ENV=pages vite build --base=./",
     "test": "echo \"No tests\"",
     "test:e2e": "playwright test",
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "preview": "vite preview"
+    "preview": "cross-env REACT_APP_DEPLOY_ENV=pages vite preview"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
